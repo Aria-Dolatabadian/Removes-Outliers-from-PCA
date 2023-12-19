@@ -27,7 +27,7 @@ plt.scatter(X_pca_all[:, 0], X_pca_all[:, 1], c=y_all, cmap='viridis')
 plt.title('PCA Results Before Removing Outliers')
 
 # Define a threshold to identify outliers (you can adjust this based on your data)
-threshold = 8
+threshold = 8   # Values greater than threshold will be removed
 
 # Identify and remove outliers
 mask_all = np.any(np.abs(X_all) > threshold, axis=1)
